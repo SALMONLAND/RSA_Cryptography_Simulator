@@ -31,10 +31,9 @@ int main() {
     int cipherLen = 0;
     int choice;
     
-    printf("╔════════════════════════════════════════╗\n");
-    printf("║  RSA 암호화 시뮬레이터 v1.0            ║\n");
-    printf("║  개발: 이관엽 (Cyber Security Project) ║\n");
-    printf("╚════════════════════════════════════════╝\n");
+    printf("[----------------------------------------]\n");
+    printf("[  RSA 암호화 시뮬레이터 v1.0            ]\n");
+    printf("[----------------------------------------]\n");
     
     while (1) {
         printf("\n┌────────────────────────────┐\n");
@@ -109,7 +108,7 @@ int main() {
                 }
                 
                 printSeparator();
-                printf("   ✓ RSA 키 생성 완료!\n");
+                printf("   ? RSA 키 생성 완료!\n");
                 printSeparator();
                 displayKeys(key);
                 
@@ -178,9 +177,9 @@ int main() {
                 
                 // 원본과 비교
                 if (strcmp(plaintext, decrypted) == 0) {
-                    printf("✓ 복호화 성공! 원본 메시지와 일치합니다.\n");
+                    printf("? 복호화 성공! 원본 메시지와 일치합니다.\n");
                 } else {
-                    printf("✗ 복호화 실패! 원본 메시지와 불일치합니다.\n");
+                    printf("? 복호화 실패! 원본 메시지와 불일치합니다.\n");
                 }
                 
                 break;
@@ -378,11 +377,11 @@ void displayKeys(RSAKey key) {
            key.e, key.d, phi, (key.e * key.d) % phi);
     
     if ((key.e * key.d) % phi == 1) {
-        printf("  ✓ 키가 올바르게 생성되었습니다!\n");
+        printf("키가 올바르게 생성되었습니다!\n");
     }
 }
 
 // 구분선 출력
 void printSeparator() {
-    printf("════════════════════════════════════════\n");
+    printf("============================================================\n");
 }
